@@ -1,8 +1,0 @@
-test_suite(
-    name = "all_tests",
-    tests = [
-        "//cpp:all_tests",
-        "//java:all_tests",
-        "//py:all_tests",
-    ],
-)
