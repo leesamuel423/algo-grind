@@ -1,0 +1,11 @@
+cc_library(
+    name = "cpp_lib",
+    srcs = glob(["**/*.cc"], exclude = ["**/test.cc"]),
+    hdrs = glob(["**/*.h"]),
+    visibility = ["//visibility:public"],
+)
+
+test_suite(
+    name = "all_tests",
+    tests = glob(["**/test.cc"], exclude = ["**/*test.cc"]),
+)
