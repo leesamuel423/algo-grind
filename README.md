@@ -1,8 +1,19 @@
 # algo-grind
 
+Practicing algorithms + learning new languages
 
-To run tests:
-```
-bazel test //...
-```
+- Python
+- Java
+- C++
+
+## Testing
+* To run tests:
+    ```
+    bazel test //...
+    ```
+To run individual test:
+    ```
+    bazel test //path:test
+    ie: bazel test //py/0001:test
+    ```
 
