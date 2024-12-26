@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "solution",
+    srcs = ["solution.go"],
+    importpath = "github.com/username/algo-grind/go/0217",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "test",
+    size = "small",
+    srcs = ["solution_test.go"],
+    embed = [":solution"],
+)
