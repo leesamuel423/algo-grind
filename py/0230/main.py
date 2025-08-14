@@ -4,12 +4,24 @@ from py.lib.tree import TreeNode
 
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        def in_order(node):
-            return (
-                in_order(node.left) + [node.val] + in_order(node.right) if node else []
-            )
+        stack = []
+        while True:
+            while root:
+                stack.append(root)
+                root = root.left
+            root = stack.pop()
+            k -= 1
+            if not k:
+                return root.val
+            root = root.right
 
-        return in_order(root)[k - 1]
+    # def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+    #     def in_order(node):
+    #         return (
+    #             in_order(node.left) + [node.val] + in_order(node.right) if node else []
+    #         )
+    #
+    #     return in_order(root)[k - 1]
 
 
 """
