@@ -25,7 +25,8 @@ py_test(
 
 py_library(
     name = "main",
-    srcs = ["main.py"]
+    srcs = ["main.py"],
+    deps = ["//py/lib:tree"]
 )
 """
 
@@ -55,7 +56,9 @@ class Test{number}(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-""".format(number=padded_number)
+""".format(
+        number=padded_number
+    )
 
     # Write files
     with open(os.path.join(dir_path, "BUILD.bazel"), "w") as f:
