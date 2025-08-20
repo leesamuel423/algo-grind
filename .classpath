@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="java/0001"/>
+	<classpathentry kind="src" path="java/0020"/>
+	<classpathentry kind="src" path="java/0121"/>
+	<classpathentry kind="src" path="java/0155"/>
+	<classpathentry kind="src" path="java/0217"/>
+	<classpathentry kind="src" path="java/1929"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17"/>
+	<classpathentry kind="lib" path="/private/var/tmp/_bazel_samuellee/f3fab3a3ca4522f85731fa7a69ea8628/external/rules_jvm_external++maven+maven/v1/https/repo.maven.apache.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar"/>
+	<classpathentry kind="lib" path="/private/var/tmp/_bazel_samuellee/f3fab3a3ca4522f85731fa7a69ea8628/external/rules_jvm_external++maven+maven/v1/https/repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="output" path="bazel-bin"/>
+</classpath>
