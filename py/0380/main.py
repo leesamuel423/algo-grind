@@ -6,16 +6,11 @@ class RandomizedSet:
     def __init__(self):
         self.values = []
         self.map = {}
-        self.length = 0
 
     def insert(self, val: int) -> bool:
         if val not in self.map:
             self.map[val] = len(self.values)
-            if len(self.values) > self.length:
-                self.values[self.length] = val
-            else:
-                self.values.append(val)
-            self.length += 1
+            self.values.append(val)
             return True
         return False
 
