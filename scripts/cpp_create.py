@@ -9,7 +9,14 @@ def create_problem(number):
 
     # Create directory
     dir_path = f"cpp/{padded_number}"
-    os.makedirs(dir_path, exist_ok=True)
+
+    # Check if directory already exists
+    if os.path.exists(dir_path):
+        print(f"Error: Directory {dir_path} already exists!")
+        print(f"If you want to recreate it, delete it first: rm -rf {dir_path}")
+        sys.exit(1)
+
+    os.makedirs(dir_path)
 
     # Create BUILD.bazel
     build_content = """cc_library(

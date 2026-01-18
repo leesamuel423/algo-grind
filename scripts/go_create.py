@@ -9,7 +9,14 @@ def create_problem(number):
 
     # Create directory
     dir_path = f"go/{padded_number}"
-    os.makedirs(dir_path, exist_ok=True)
+
+    # Check if directory already exists
+    if os.path.exists(dir_path):
+        print(f"Error: Directory {dir_path} already exists!")
+        print(f"If you want to recreate it, delete it first: rm -rf {dir_path}")
+        sys.exit(1)
+
+    os.makedirs(dir_path)
 
     # Create BUILD.bazel
     build_content = """load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
