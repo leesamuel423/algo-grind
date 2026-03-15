@@ -1,9 +1,6 @@
 #ifndef SOLUTION_H
 #define SOLUTION_H
 
-#include <iostream>
-#include <vector>
-#include <map>
 #include <stack>
 
 class MinStack {
@@ -11,15 +8,7 @@ private:
   std::stack<int> s1;
   std::stack<int> s2;
 public:
-
-  void push(int val) {
-    s1.push(val);
-    if (s2.empty()) {
-      s2.push(val);
-    } else {
-      s2.push(std::min(s2.top(), val));
-    }
-  }
+  void push(int val);
 
   void pop() {
     s1.pop();
@@ -31,7 +20,7 @@ public:
   }
 
   int getMin() {
-    return s2.top(); 
+    return s2.top();
   }
 };
 

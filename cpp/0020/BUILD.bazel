@@ -1,5 +1,6 @@
 cc_library(
     name = "solution",
+    srcs = ["solution.cc"],
     hdrs = ["solution.h"],
     visibility = ["//visibility:public"],
 )
