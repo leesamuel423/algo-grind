@@ -21,6 +21,7 @@ def create_problem(number):
     # Create BUILD.bazel
     build_content = """cc_library(
     name = "solution",
+    srcs = ["solution.cc"],
     hdrs = ["solution.h"],
     visibility = ["//visibility:public"],
 )
@@ -44,12 +45,17 @@ cc_test(
 
 class Solution {
 public:
-    int solution(int input) {
-        return 0;
-    }
+  int solution(int input);
 };
 
 #endif // SOLUTION_H
+"""
+
+    solution_cc_content = """#include "solution.h"
+
+int Solution::solution(int input) {
+  return 0;
+}
 """
 
     # Create test.cc
@@ -57,13 +63,13 @@ public:
 #include "cpp/{padded_number}/solution.h"
 
 TEST(SolutionTest, Test1) {{
-    Solution solution;
-    EXPECT_EQ(solution.solution(0), 0);
+  Solution solution;
+  EXPECT_EQ(solution.solution(0), 0);
 }}
 
 TEST(SolutionTest, Test2) {{
-    Solution solution;
-    EXPECT_EQ(solution.solution(1), 0);
+  Solution solution;
+  EXPECT_EQ(solution.solution(1), 0);
 }}
 """
 
@@ -73,6 +79,9 @@ TEST(SolutionTest, Test2) {{
 
     with open(os.path.join(dir_path, "solution.h"), "w") as f:
         f.write(solution_content)
+
+    with open(os.path.join(dir_path, "solution.cc"), "w") as f:
+        f.write(solution_cc_content)
 
     with open(os.path.join(dir_path, "test.cc"), "w") as f:
         f.write(test_content)
