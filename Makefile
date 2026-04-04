@@ -91,7 +91,12 @@ check-go:
 test:
 	@if [ -z "$(filter-out $@,$(MAKECMDGOALS))" ]; then \
 		echo "Running all tests..."; \
-		bazel test //...; \
+		TMPFILE=$$(mktemp); \
+		bazel test //... 2>&1 | tee "$$TMPFILE"; \
+		EXIT_CODE=$${PIPESTATUS[0]}; \
+		python3 scripts/test_summary.py "$$TMPFILE"; \
+		rm -f "$$TMPFILE"; \
+		exit $$EXIT_CODE; \
 	else \
 		echo "Running test for $(filter-out $@,$(MAKECMDGOALS))..."; \
 		bazel test //$(filter-out $@,$(MAKECMDGOALS)):test; \
