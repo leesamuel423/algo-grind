@@ -1,0 +1,4 @@
+CompileFlags:
+  Add:
+    - -I/Users/samuellee/projects/algo-grind
+    - -I/private/var/tmp/_bazel_samuellee/f3fab3a3ca4522f85731fa7a69ea8628/external/googletest+/googletest/include
