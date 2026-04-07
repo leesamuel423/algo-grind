@@ -1,0 +1,16 @@
+cc_library(
+    name = "solution",
+    srcs = ["solution.cc"],
+    hdrs = ["solution.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_test(
+    name = "test",
+    size = "small",
+    srcs = ["test.cc"],
+    deps = [
+        ":solution",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
