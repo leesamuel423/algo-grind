@@ -5,7 +5,7 @@ SHELL := /bin/bash
 GREEN := \033[0;32m
 NC := \033[0m # No Color
 
-.PHONY: help go java py cpp check-py check-cpp check-java check-go test clean format
+.PHONY: help go java py cpp check-py check-cpp check-java check-go test clean format install-hooks
 
 help:
 	@echo "Usage:"
@@ -20,6 +20,7 @@ help:
 	@echo "  make test         	- Run all tests"
 	@echo "  make test go/0001 	- Run specific test"
 	@echo "  make format       	- Format all source files"
+	@echo "  make install-hooks	- Install git pre-commit hook"
 	@echo "  make clean        	- Clean Bazel artifacts"
 
 # Create new problems
@@ -114,6 +115,12 @@ format:
 	@echo "Formatting Java..."
 	@find java -name '*.java' | xargs google-java-format -i
 	@echo -e "${GREEN}Done${NC}"
+
+# Git hooks
+install-hooks:
+	@cp scripts/pre-commit .git/hooks/pre-commit
+	@chmod +x .git/hooks/pre-commit
+	@echo -e "${GREEN}Pre-commit hook installed${NC}"
 
 # Cleanup
 clean:
