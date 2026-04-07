@@ -2,7 +2,7 @@
 
 #include <map>
 
-std::vector<int> Solution::twoSum(std::vector<int>& nums, int target) {
+std::vector<int> Solution::twoSum(std::vector<int> &nums, int target) {
   std::map<int, int> cache;
 
   for (int i = 0; i < nums.size(); i++) {

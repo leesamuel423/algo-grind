@@ -1,6 +1,7 @@
 import unittest
 from main import Solution
 
+
 class Test0003(unittest.TestCase):
     def test(self):
         testcases = [
@@ -16,5 +17,6 @@ class Test0003(unittest.TestCase):
             actual = s.lengthOfLongestSubstring(input_val)
             self.assertEqual(expected, actual)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

@@ -2,7 +2,7 @@
 
 #include <limits.h>
 
-int Solution::maxProfit(std::vector<int>& prices) {
+int Solution::maxProfit(std::vector<int> &prices) {
   int minimum = INT_MAX;
   int maximum = 0;
 

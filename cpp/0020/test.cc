@@ -1,5 +1,5 @@
-#include <gtest/gtest.h>
 #include "cpp/0020/solution.h"
+#include <gtest/gtest.h>
 
 TEST(IsValid, Test1) {
   Solution solution;

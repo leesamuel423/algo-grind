@@ -1,5 +1,5 @@
-#include <gtest/gtest.h>
 #include "cpp/0346/solution.h"
+#include <gtest/gtest.h>
 
 TEST(MovingAverageTest, Example1) {
   MovingAverage ma(3);

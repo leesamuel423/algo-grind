@@ -1,6 +1,7 @@
 import unittest
 from main import Solution
 
+
 class Test0001(unittest.TestCase):
     def test(self):
         testcases = [
@@ -15,5 +16,6 @@ class Test0001(unittest.TestCase):
             actual = s.twoSum(nums, target)
             self.assertEquals(expected, actual)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

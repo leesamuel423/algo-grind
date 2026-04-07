@@ -7,6 +7,7 @@ class MinStack {
 private:
   std::stack<int> s1;
   std::stack<int> s2;
+
 public:
   void push(int val);
 
@@ -15,13 +16,9 @@ public:
     s2.pop();
   }
 
-  int top() {
-    return s1.top();
-  }
+  int top() { return s1.top(); }
 
-  int getMin() {
-    return s2.top();
-  }
+  int getMin() { return s2.top(); }
 };
 
 /**
@@ -32,6 +29,5 @@ public:
  * int param_3 = obj->top();
  * int param_4 = obj->getMin();
  */
-
 
 #endif // SOLUTION_H

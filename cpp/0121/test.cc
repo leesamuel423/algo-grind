@@ -1,5 +1,5 @@
-#include <gtest/gtest.h>
 #include "cpp/0121/solution.h"
+#include <gtest/gtest.h>
 
 TEST(MaxProfitTest, Test1) {
   Solution solution;

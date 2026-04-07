@@ -8,5 +8,4 @@ public:
   bool isValid(std::string s);
 };
 
-
 #endif // SOLUTION_H

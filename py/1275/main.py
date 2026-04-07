@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def tictactoe(self, moves: List[List[int]]) -> str:
         board = [[""] * 3 for _ in range(3)]

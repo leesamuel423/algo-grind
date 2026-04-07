@@ -1,5 +1,6 @@
-import org.junit.Test;
 import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 public class MainTest {
 
@@ -12,11 +13,7 @@ public class MainTest {
       {3, 2, 4},
       {3, 3},
     };
-    int[] testCasesTargets = {
-      9,
-      6,
-      6
-    };
+    int[] testCasesTargets = {9, 6, 6};
 
     int[][] expectedResults = {
       {0, 1},

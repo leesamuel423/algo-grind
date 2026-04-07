@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def trap(self, height: List[int]) -> int:
         l = 0
@@ -17,5 +18,5 @@ class Solution:
                 right_max = max(right_max, height[r])
                 total += right_max - height[r]
                 r -= 1
-        
+
         return total

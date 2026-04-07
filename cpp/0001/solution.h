@@ -5,8 +5,7 @@
 
 class Solution {
 public:
-  std::vector<int> twoSum(std::vector<int>& nums, int target);
+  std::vector<int> twoSum(std::vector<int> &nums, int target);
 };
-
 
 #endif // SOLUTION_H

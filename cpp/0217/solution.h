@@ -6,10 +6,10 @@
 
 class Solution {
 public:
-    bool containsDuplicate(const std::vector<int>& nums) {
-        std::unordered_set<int> set(nums.begin(), nums.end());
-        return set.size() != nums.size();
-    }
+  bool containsDuplicate(const std::vector<int> &nums) {
+    std::unordered_set<int> set(nums.begin(), nums.end());
+    return set.size() != nums.size();
+  }
 };
 
 #endif // SOLUTION_H

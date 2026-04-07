@@ -1,6 +1,7 @@
 from collections import defaultdict
 from typing import List
 
+
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         adj_list = defaultdict(list)
@@ -11,15 +12,14 @@ class Solution:
         for prereq in prerequisites:
             adj_list[prereq[1]].append(prereq[0])
             required[prereq[0]] += 1
-        
+
         # main operation
         for idx, num in enumerate(required):
             if num == 0 and idx not in visited:
                 visited.add(idx)
                 self.dfs(idx, required, adj_list, visited)
-        
-        return len(visited) == numCourses
 
+        return len(visited) == numCourses
 
     def dfs(self, idx, required, adj_list, visited):
         for i in adj_list[idx]:
@@ -27,7 +27,6 @@ class Solution:
             if required[i] == 0:
                 visited.add(i)
                 self.dfs(i, required, adj_list, visited)
-
 
 
 """
@@ -53,4 +52,3 @@ helper fn dfs (idx, required, adjacency list, visited)
             add to visited set
             dfs ()
 """
-        

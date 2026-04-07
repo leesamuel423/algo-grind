@@ -1,12 +1,10 @@
 import unittest
 from main import Solution
 
+
 class Test0121(unittest.TestCase):
     def test(self):
-        testcases = [
-            [[[7, 10], [2, 4]], True],
-            [[[0, 30], [5, 10], [15, 20]], False]
-        ]
+        testcases = [[[[7, 10], [2, 4]], True], [[[0, 30], [5, 10], [15, 20]], False]]
 
         for i in testcases:
             intervals, expected = i
@@ -14,5 +12,6 @@ class Test0121(unittest.TestCase):
             actual = s.canAttendMeetings(intervals)
             self.assertEqual(expected, actual)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

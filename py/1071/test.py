@@ -1,6 +1,7 @@
 import unittest
 from main import Solution
 
+
 class Test1071(unittest.TestCase):
     def test(self):
         testcases = [
@@ -8,7 +9,11 @@ class Test1071(unittest.TestCase):
             ["ABABAB", "ABAB", "AB"],
             ["LEET", "CODE", ""],
             ["CBACBA", "ABC", ""],
-            ["TAUXXTAUXXTAUXXTAUXXTAUXX", "TAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXX", "TAUXX"]
+            [
+                "TAUXXTAUXXTAUXXTAUXXTAUXX",
+                "TAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXX",
+                "TAUXX",
+            ],
         ]
 
         for i in testcases:
@@ -17,5 +22,6 @@ class Test1071(unittest.TestCase):
             actual = s.gcdOfStrings(str1, str2)
             self.assertEqual(expected, actual)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

@@ -1,10 +1,11 @@
 from collections import OrderedDict
 
+
 class LRUCache:
     def __init__(self, capacity: int):
         self.capacity = capacity
         self.cache = OrderedDict()
-        
+
     def get(self, key: int) -> int:
         if key not in self.cache:
             return -1

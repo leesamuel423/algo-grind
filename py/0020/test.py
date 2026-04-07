@@ -1,6 +1,7 @@
 import unittest
 from main import Solution
 
+
 class Test0020(unittest.TestCase):
     def test(self):
         testcases = [
@@ -17,5 +18,6 @@ class Test0020(unittest.TestCase):
             actual = s.isValid(nums)
             self.assertEquals(expected, actual)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

@@ -5,7 +5,7 @@ SHELL := /bin/bash
 GREEN := \033[0;32m
 NC := \033[0m # No Color
 
-.PHONY: help go java py cpp check-py check-cpp check-java check-go test clean
+.PHONY: help go java py cpp check-py check-cpp check-java check-go test clean format
 
 help:
 	@echo "Usage:"
@@ -19,6 +19,7 @@ help:
 	@echo "  make check-go 268 	- Check if Go problem exists"
 	@echo "  make test         	- Run all tests"
 	@echo "  make test go/0001 	- Run specific test"
+	@echo "  make format       	- Format all source files"
 	@echo "  make clean        	- Clean Bazel artifacts"
 
 # Create new problems
@@ -101,6 +102,18 @@ test:
 		echo "Running test for $(filter-out $@,$(MAKECMDGOALS))..."; \
 		bazel test //$(filter-out $@,$(MAKECMDGOALS)):test; \
 	fi
+
+# Formatting
+format:
+	@echo "Formatting C++..."
+	@find cpp -name '*.cc' -o -name '*.h' | xargs clang-format -i
+	@echo "Formatting Python..."
+	@find py -name '*.py' | xargs black --quiet
+	@echo "Formatting Go..."
+	@find go -name '*.go' | xargs gofmt -w
+	@echo "Formatting Java..."
+	@find java -name '*.java' | xargs google-java-format -i
+	@echo -e "${GREEN}Done${NC}"
 
 # Cleanup
 clean:

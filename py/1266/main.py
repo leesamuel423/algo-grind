@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def minTimeToVisitAllPoints(self, points: List[List[int]]) -> int:
         path = 0
@@ -10,6 +11,3 @@ class Solution:
             vertical = abs(a[1] - b[1])
             path += max(horizontal, vertical)
         return path
-
-
-        

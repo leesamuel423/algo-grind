@@ -1,6 +1,7 @@
 from typing import List
 import math
 
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         minimum = math.inf
@@ -13,4 +14,3 @@ class Solution:
                 max_profit = i - minimum
 
         return max_profit
-

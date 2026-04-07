@@ -1,5 +1,6 @@
-import org.junit.Test;
 import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 public class MainTest {
 
@@ -7,21 +8,9 @@ public class MainTest {
   public void testIsValid() {
     Solution solution = new Solution();
 
-    String[] testCasesNums = {
-      "()",
-      "()[]{}",
-      "(]",
-      "([])",
-      "([)]"
-    };
+    String[] testCasesNums = {"()", "()[]{}", "(]", "([])", "([)]"};
 
-    boolean[] expectedResults = {
-      true,
-      true,
-      false,
-      true,
-      false
-    };
+    boolean[] expectedResults = {true, true, false, true, false};
 
     for (int i = 0; i < testCasesNums.length; i++) {
       boolean result = solution.isValid(testCasesNums[i]);

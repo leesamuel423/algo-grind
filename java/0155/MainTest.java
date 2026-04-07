@@ -1,5 +1,6 @@
-import org.junit.Test;
 import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 public class MainTest {
 
@@ -15,23 +16,23 @@ public class MainTest {
     for (int i = 0; i < operations.length; i++) {
       switch (operations[i]) {
         case "MinStack":
-        // MinStack constructor already invoked, nothing to do here
-        actual[i] = null;
-        break;
+          // MinStack constructor already invoked, nothing to do here
+          actual[i] = null;
+          break;
         case "push":
-        s.push(arguments[i][0]);
-        actual[i] = null;
-        break;
+          s.push(arguments[i][0]);
+          actual[i] = null;
+          break;
         case "pop":
-        s.pop();
-        actual[i] = null;
-        break;
+          s.pop();
+          actual[i] = null;
+          break;
         case "top":
-        actual[i] = s.top();
-        break;
+          actual[i] = s.top();
+          break;
         case "getMin":
-        actual[i] = s.getMin();
-        break;
+          actual[i] = s.getMin();
+          break;
       }
     }
 

@@ -1,5 +1,5 @@
-#include <gtest/gtest.h>
 #include "cpp/1929/solution.h"
+#include <gtest/gtest.h>
 
 TEST(GetConcatenation, Test1) {
   Solution solution;

@@ -1,16 +1,18 @@
-#include <gtest/gtest.h>
 #include "cpp/0155/solution.h"
+#include <gtest/gtest.h>
 
 TEST(MinStackTest, Test1) {
-  std::vector<std::string> operations = {"MinStack", "push", "push", "push", "getMin", "pop", "top", "getMin"};
-  std::vector<std::vector<int>> arguments = {{}, {-2}, {0}, {-3}, {}, {}, {}, {}};
+  std::vector<std::string> operations = {"MinStack", "push", "push", "push",
+                                         "getMin",   "pop",  "top",  "getMin"};
+  std::vector<std::vector<int>> arguments = {{}, {-2}, {0}, {-3},
+                                             {}, {},   {},  {}};
   std::vector<int> expected = {0, 0, 0, 0, -3, 0, 0, -2};
   std::vector<int> actual;
   MinStack s;
 
   for (size_t i = 0; i < operations.size(); i++) {
     if (operations[i] == "MinStack") {
-      continue;  // Constructor is already invoked
+      continue; // Constructor is already invoked
     } else if (operations[i] == "push") {
       s.push(arguments[i][0]);
     } else if (operations[i] == "pop") {

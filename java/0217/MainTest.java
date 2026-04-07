@@ -1,5 +1,6 @@
-import org.junit.Test;
 import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 public class MainTest {
 
@@ -7,17 +8,13 @@ public class MainTest {
   public void testContainsDuplicate() {
     Solution solution = new Solution();
 
-    int [][] testCases = {
+    int[][] testCases = {
       {1, 2, 3, 1},
       {1, 2, 3, 4},
       {1, 2, 2, 3, 3, 4, 3, 2, 4, 2},
     };
 
-    boolean[] expectedResults = {
-      true,
-      false,
-      true
-    };
+    boolean[] expectedResults = {true, false, true};
 
     for (int i = 0; i < testCases.length; i++) {
       boolean result = solution.containsDuplicate(testCases[i]);

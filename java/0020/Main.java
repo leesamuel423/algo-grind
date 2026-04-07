@@ -17,7 +17,7 @@ class Solution {
         stack.push(el);
       }
     }
-    
+
     return stack.isEmpty();
   }
 }

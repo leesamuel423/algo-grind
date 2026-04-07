@@ -1,5 +1,6 @@
-import org.junit.Test;
 import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 public class MainTest {
 
@@ -12,10 +13,7 @@ public class MainTest {
       {7, 6, 4, 3, 1}
     };
 
-    int[] expectedResults = {
-      5,
-      0
-    };
+    int[] expectedResults = {5, 0};
 
     for (int i = 0; i < testCases.length; i++) {
       int result = solution.maxProfit(testCases[i]);
