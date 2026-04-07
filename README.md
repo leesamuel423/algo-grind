@@ -38,6 +38,35 @@ To run tests for a specific problem:
 make test go/0001  # Test Go problem #0001
 ```
 
+### Checking Problems
+
+Check if a problem solution exists for a given language:
+
+```bash
+make check-go 268    # Check if Go problem #268 exists
+make check-java 268  # Check if Java problem #268 exists
+make check-py 268    # Check if Python problem #268 exists
+make check-cpp 268   # Check if C++ problem #268 exists
+```
+
+### Formatting
+
+Format all source files across all languages:
+
+```bash
+make format
+```
+
+This runs `clang-format` (C++), `black` (Python), `gofmt` (Go), and `google-java-format` (Java).
+
+### Git Hooks
+
+Install a pre-commit hook that auto-formats staged files on each commit:
+
+```bash
+make install-hooks
+```
+
 ### Cleanup
 
 Remove Bazel build artifacts:
