@@ -16,7 +16,7 @@ LABEL_WIDTH = 7
 
 def parse_results(filepath):
     tests = defaultdict(list)
-    pattern = re.compile(r"^//(\w+)/(\d+):test\s+(PASSED|FAILED)")
+    pattern = re.compile(r"^//(\w+)/(\d+):test\s+(?:\(cached\)\s+)?(PASSED|FAILED)")
     with open(filepath) as f:
         for line in f:
             m = pattern.search(line.strip())
